@@ -774,48 +774,48 @@ const rawTeams: {
     "batters": [
       {
         "lineupNo": 1,
-        "position": "RF",
+        "position": "LF",
         "name": "박재현"
       },
       {
         "lineupNo": 2,
+        "position": "SS",
+        "name": "윤도현"
+      },
+      {
+        "lineupNo": 3,
         "position": "CF",
         "name": "김호령"
       },
       {
-        "lineupNo": 3,
+        "lineupNo": 4,
         "position": "3B",
         "name": "김도영"
       },
       {
-        "lineupNo": 4,
+        "lineupNo": 5,
         "position": "1B",
         "name": "아데를린"
       },
       {
-        "lineupNo": 5,
-        "position": "DH",
+        "lineupNo": 6,
+        "position": "RF",
         "name": "나성범"
       },
       {
-        "lineupNo": 6,
-        "position": "2B",
+        "lineupNo": 7,
+        "position": "DH",
         "name": "김선빈"
       },
       {
-        "lineupNo": 7,
+        "lineupNo": 8,
         "position": "C",
         "name": "한준수"
       },
       {
-        "lineupNo": 8,
-        "position": "LF",
-        "name": "박정우"
-      },
-      {
         "lineupNo": 9,
-        "position": "SS",
-        "name": "박민"
+        "position": "2B",
+        "name": "김규성"
       }
     ],
     "pitchers": [
@@ -834,14 +834,14 @@ const rawTeams: {
         "label": "2선발"
       },
       {
-        "name": "황동하",
+        "name": "양현종",
         "role": "SP",
         "rotationNo": 3,
         "bullpenTier": null,
         "label": "3선발"
       },
       {
-        "name": "양현종",
+        "name": "황동하",
         "role": "SP",
         "rotationNo": 4,
         "bullpenTier": null,
@@ -855,14 +855,14 @@ const rawTeams: {
         "label": "5선발"
       },
       {
-        "name": "조상우",
+        "name": "곽도규",
         "role": "RP",
         "rotationNo": null,
         "bullpenTier": "SETUP",
         "label": "필승조"
       },
       {
-        "name": "최지민",
+        "name": "조상우",
         "role": "RP",
         "rotationNo": null,
         "bullpenTier": "SETUP",
@@ -883,14 +883,14 @@ const rawTeams: {
         "label": "패전조"
       },
       {
-        "name": "한재승",
+        "name": "이태양",
         "role": "RP",
         "rotationNo": null,
         "bullpenTier": "MOPUP",
         "label": "패전조"
       },
       {
-        "name": "이태양",
+        "name": "최지민",
         "role": "RP",
         "rotationNo": null,
         "bullpenTier": "LONG",
@@ -901,7 +901,7 @@ const rawTeams: {
         "crisis": 71
       },
       {
-        "name": "홍민규",
+        "name": "전상현",
         "role": "RP",
         "rotationNo": null,
         "bullpenTier": "LONG",
@@ -1251,28 +1251,28 @@ const rawTeams: {
     "batters": [
       {
         "lineupNo": 1,
-        "position": "CF",
-        "name": "황성빈"
+        "position": "LF",
+        "name": "장두성"
       },
       {
         "lineupNo": 2,
-        "position": "2B",
-        "name": "고승민"
+        "position": "CF",
+        "name": "윤동희"
       },
       {
         "lineupNo": 3,
-        "position": "LF",
-        "name": "레이예스"
-      },
-      {
-        "lineupNo": 4,
         "position": "1B",
         "name": "나승엽"
       },
       {
+        "lineupNo": 4,
+        "position": "RF",
+        "name": "레이예스"
+      },
+      {
         "lineupNo": 5,
-        "position": "DH",
-        "name": "전준우"
+        "position": "2B",
+        "name": "고승민"
       },
       {
         "lineupNo": 6,
@@ -1281,8 +1281,8 @@ const rawTeams: {
       },
       {
         "lineupNo": 7,
-        "position": "SS",
-        "name": "전민재"
+        "position": "DH",
+        "name": "전준우"
       },
       {
         "lineupNo": 8,
@@ -1291,48 +1291,55 @@ const rawTeams: {
       },
       {
         "lineupNo": 9,
-        "position": "RF",
-        "name": "장두성"
+        "position": "SS",
+        "name": "전민재"
       }
     ],
     "pitchers": [
       {
-        "name": "나균안",
+        "name": "비슬리",
         "role": "SP",
         "rotationNo": 1,
         "bullpenTier": null,
         "label": "1선발"
       },
       {
-        "name": "김진욱",
+        "name": "나균안",
         "role": "SP",
         "rotationNo": 2,
         "bullpenTier": null,
         "label": "2선발"
       },
       {
-        "name": "비슬리",
+        "name": "로드리게스",
         "role": "SP",
         "rotationNo": 3,
         "bullpenTier": null,
         "label": "3선발"
       },
       {
-        "name": "로드리게스",
+        "name": "박세웅",
         "role": "SP",
         "rotationNo": 4,
         "bullpenTier": null,
         "label": "4선발"
       },
       {
-        "name": "박세웅",
+        "name": "김진욱",
         "role": "SP",
         "rotationNo": 5,
         "bullpenTier": null,
         "label": "5선발"
       },
       {
-        "name": "박정민",
+        "name": "정철원",
+        "role": "RP",
+        "rotationNo": null,
+        "bullpenTier": "SETUP",
+        "label": "필승조"
+      },
+      {
+        "name": "구승민",
         "role": "RP",
         "rotationNo": null,
         "bullpenTier": "SETUP",
@@ -1346,28 +1353,21 @@ const rawTeams: {
         "label": "필승조"
       },
       {
-        "name": "현도훈",
-        "role": "RP",
-        "rotationNo": null,
-        "bullpenTier": "SETUP",
-        "label": "필승조"
-      },
-      {
-        "name": "쿄야마",
+        "name": "윤성빈",
         "role": "RP",
         "rotationNo": null,
         "bullpenTier": "MOPUP",
         "label": "패전조"
       },
       {
-        "name": "정철원",
+        "name": "이민석",
         "role": "RP",
         "rotationNo": null,
         "bullpenTier": "MOPUP",
         "label": "패전조"
       },
       {
-        "name": "최이준",
+        "name": "박정민",
         "role": "RP",
         "rotationNo": null,
         "bullpenTier": "LONG",
@@ -1378,7 +1378,7 @@ const rawTeams: {
         "crisis": 71
       },
       {
-        "name": "정현수",
+        "name": "김강현",
         "role": "RP",
         "rotationNo": null,
         "bullpenTier": "LONG",
