@@ -461,8 +461,8 @@ const rawTeams: {
       },
       {
         "lineupNo": 2,
-        "position": "LF",
-        "name": "구본혁"
+        "position": "CF",
+        "name": "박해민"
       },
       {
         "lineupNo": 3,
@@ -476,28 +476,28 @@ const rawTeams: {
       },
       {
         "lineupNo": 5,
+        "position": "LF",
+        "name": "문성주"
+      },
+      {
+        "lineupNo": 6,
+        "position": "DH",
+        "name": "송찬의"
+      },
+      {
+        "lineupNo": 7,
         "position": "SS",
         "name": "오지환"
       },
       {
-        "lineupNo": 6,
+        "lineupNo": 8,
         "position": "C",
         "name": "박동원"
       },
       {
-        "lineupNo": 7,
+        "lineupNo": 9,
         "position": "2B",
         "name": "신민재"
-      },
-      {
-        "lineupNo": 8,
-        "position": "DH",
-        "name": "이재원"
-      },
-      {
-        "lineupNo": 9,
-        "position": "CF",
-        "name": "박해민"
       }
     ],
     "pitchers": [
@@ -509,14 +509,14 @@ const rawTeams: {
         "label": "1선발"
       },
       {
-        "name": "톨허스트",
+        "name": "손주영",
         "role": "SP",
         "rotationNo": 2,
         "bullpenTier": null,
         "label": "2선발"
       },
       {
-        "name": "송승기",
+        "name": "톨허스트",
         "role": "SP",
         "rotationNo": 3,
         "bullpenTier": null,
@@ -530,7 +530,7 @@ const rawTeams: {
         "label": "4선발"
       },
       {
-        "name": "치리노스",
+        "name": "송승기",
         "role": "SP",
         "rotationNo": 5,
         "bullpenTier": null,
@@ -558,6 +558,13 @@ const rawTeams: {
         "label": "필승조"
       },
       {
+        "name": "김진수",
+        "role": "RP",
+        "rotationNo": null,
+        "bullpenTier": "MOPUP",
+        "label": "패전조"
+      },
+      {
         "name": "장현식",
         "role": "RP",
         "rotationNo": null,
@@ -565,14 +572,7 @@ const rawTeams: {
         "label": "패전조"
       },
       {
-        "name": "함덕주",
-        "role": "RP",
-        "rotationNo": null,
-        "bullpenTier": "MOPUP",
-        "label": "패전조"
-      },
-      {
-        "name": "김진수",
+        "name": "김윤식",
         "role": "RP",
         "rotationNo": null,
         "bullpenTier": "LONG",
