@@ -1,0 +1,1430 @@
+:root {
+  color: #e5e7eb;
+  background: #08111f;
+  font-family: Inter, Pretendard, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.35), transparent 32rem),
+    radial-gradient(circle at bottom right, rgba(220, 38, 38, 0.18), transparent 32rem),
+    #08111f;
+}
+
+button {
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  background: rgba(15, 23, 42, 0.9);
+  color: #f8fafc;
+  border-radius: 12px;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  border-color: rgba(255, 255, 255, 0.55);
+}
+
+button.primary {
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  border: 0;
+}
+
+button.danger {
+  background: rgba(127, 29, 29, 0.75);
+  border-color: rgba(248, 113, 113, 0.6);
+}
+
+.screen,
+.app {
+  width: min(1480px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 28px 0 60px;
+}
+
+.hero,
+.topbar,
+.panel {
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  background: rgba(15, 23, 42, 0.76);
+  box-shadow: 0 20px 80px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(18px);
+  border-radius: 24px;
+}
+
+.hero {
+  padding: 40px;
+  margin-bottom: 24px;
+}
+
+.hero h1,
+.topbar h1 {
+  font-size: clamp(28px, 4vw, 52px);
+  line-height: 1.05;
+  margin: 0 0 12px;
+}
+
+.hero p,
+.topbar p {
+  color: #cbd5e1;
+}
+
+.eyebrow {
+  color: #93c5fd;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin: 0 0 8px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 16px;
+}
+
+.team-card {
+  text-align: left;
+  min-height: 190px;
+  padding: 22px;
+  border-width: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.team-card h2 {
+  margin: 8px 0 0;
+}
+
+.team-card p,
+.muted,
+.save-text {
+  color: #94a3b8;
+}
+
+.team-badge {
+  width: fit-content;
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-weight: 900;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.mini-metrics {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.mini-metrics span {
+  background: rgba(30, 41, 59, 0.9);
+  color: #cbd5e1;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 12px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 24px;
+  margin-bottom: 18px;
+}
+
+.top-actions,
+.button-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: minmax(300px, 1fr) minmax(320px, 1fr);
+  gap: 18px;
+}
+
+.panel {
+  padding: 22px;
+  margin-bottom: 18px;
+}
+
+.section-title {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.section-title h2 {
+  margin: 0;
+}
+
+.section-title span {
+  color: #94a3b8;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.next-game h3 {
+  font-size: 28px;
+  margin: 6px 0;
+}
+
+.diagram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.node {
+  border: 1px solid rgba(96, 165, 250, 0.45);
+  background: rgba(30, 41, 59, 0.8);
+  border-radius: 16px;
+  padding: 12px 16px;
+  text-align: center;
+  min-width: 180px;
+  font-weight: 900;
+}
+
+.node small {
+  color: #bfdbfe;
+  font-weight: 600;
+}
+
+.node.abstract {
+  border-style: dashed;
+}
+
+.node.base {
+  background: rgba(30, 64, 175, 0.28);
+}
+
+.children {
+  display: flex;
+  gap: 12px;
+}
+
+.arrow {
+  color: #60a5fa;
+  font-size: 22px;
+}
+
+.console {
+  background: rgba(2, 6, 23, 0.58);
+  border-radius: 16px;
+  padding: 14px;
+  border: 1px solid rgba(148, 163, 184, 0.15);
+}
+
+.console p {
+  margin: 5px 0;
+}
+
+.console-desc {
+  color: #c4b5fd;
+  line-height: 1.5;
+}
+
+.stadium-layout {
+  display: grid;
+  grid-template-columns: minmax(340px, 1.25fr) minmax(280px, 0.75fr);
+  gap: 18px;
+}
+
+.stadium {
+  min-height: 480px;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  background:
+    linear-gradient(180deg, rgba(15, 118, 110, 0.45), rgba(22, 101, 52, 0.65)),
+    radial-gradient(circle at center, rgba(250, 204, 21, 0.25), transparent 18rem);
+  position: relative;
+}
+
+.diamond {
+  position: relative;
+  width: 100%;
+  height: 480px;
+}
+
+.outfield {
+  position: absolute;
+  inset: 28px 40px 150px;
+  border-radius: 260px 260px 80px 80px;
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  display: grid;
+  place-items: start center;
+  padding-top: 36px;
+  color: rgba(255,255,255,0.34);
+  font-weight: 900;
+  letter-spacing: 0.2em;
+}
+
+.infield {
+  position: absolute;
+  width: 190px;
+  height: 190px;
+  left: calc(50% - 95px);
+  bottom: 80px;
+  background: rgba(180, 83, 9, 0.75);
+  transform: rotate(45deg);
+  border: 2px solid rgba(254, 243, 199, 0.8);
+}
+
+.base {
+  position: absolute;
+  z-index: 2;
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  background: #fef3c7;
+  color: #78350f;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.base.home {
+  left: calc(50% - 19px);
+  bottom: 52px;
+}
+
+.base.first {
+  right: calc(50% - 138px);
+  bottom: 148px;
+}
+
+.base.second {
+  left: calc(50% - 19px);
+  bottom: 242px;
+}
+
+.base.third {
+  left: calc(50% - 138px);
+  bottom: 148px;
+}
+
+.ball {
+  position: absolute;
+  z-index: 5;
+  font-size: 34px;
+  transition: all 420ms ease;
+  filter: drop-shadow(0 8px 12px rgba(0,0,0,0.4));
+}
+
+.ball-home { left: calc(50% - 16px); bottom: 76px; }
+.ball-mound { left: calc(50% - 16px); bottom: 175px; }
+.ball-first { right: calc(50% - 120px); bottom: 165px; }
+.ball-second { left: calc(50% - 16px); bottom: 260px; }
+.ball-third { left: calc(50% - 120px); bottom: 165px; }
+.ball-short { left: 36%; bottom: 230px; }
+.ball-left { left: 18%; top: 145px; }
+.ball-center { left: calc(50% - 16px); top: 105px; }
+.ball-right { right: 18%; top: 145px; }
+.ball-leftCenter { left: 32%; top: 92px; }
+.ball-rightCenter { right: 32%; top: 92px; }
+.ball-homer { right: 10%; top: 32px; }
+
+.play-message {
+  position: absolute;
+  z-index: 7;
+  left: 50%;
+  top: 48%;
+  transform: translate(-50%, -50%);
+  background: rgba(15, 23, 42, 0.82);
+  border: 1px solid rgba(255,255,255,0.35);
+  color: #fff;
+  border-radius: 999px;
+  padding: 12px 20px;
+  font-size: 24px;
+  font-weight: 1000;
+}
+
+.play-log-card {
+  background: rgba(2, 6, 23, 0.45);
+  border-radius: 20px;
+  padding: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+}
+
+.play-log-card h3 {
+  line-height: 1.45;
+}
+
+.progress {
+  height: 10px;
+  background: rgba(148, 163, 184, 0.22);
+  border-radius: 999px;
+  overflow: hidden;
+  margin: 16px 0;
+}
+
+.progress div {
+  height: 100%;
+  background: linear-gradient(90deg, #38bdf8, #a78bfa);
+}
+
+.highlight-box {
+  margin-top: 16px;
+  border-top: 1px solid rgba(148, 163, 184, 0.18);
+  padding-top: 12px;
+}
+
+.highlight-box p {
+  color: #cbd5e1;
+  line-height: 1.4;
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  white-space: nowrap;
+}
+
+th,
+td {
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.16);
+  text-align: right;
+  font-size: 13px;
+}
+
+th:first-child,
+td:first-child,
+.team-name-cell {
+  text-align: left;
+}
+
+th {
+  color: #93c5fd;
+  background: rgba(30, 41, 59, 0.55);
+  position: sticky;
+  top: 0;
+}
+
+tr:hover td {
+  background: rgba(30, 41, 59, 0.38);
+}
+
+.rank-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 18px;
+}
+
+.rank-box h3 {
+  margin-top: 0;
+}
+
+.rank-box li {
+  margin: 8px 0;
+  color: #dbeafe;
+}
+
+.result-line {
+  font-size: 28px;
+  font-weight: 1000;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  z-index: 20;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.modal {
+  width: min(1100px, 100%);
+  max-height: 88vh;
+  overflow: auto;
+  background: #0f172a;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 30px 100px rgba(0,0,0,0.55);
+}
+
+.award-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+.award-card {
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 16px;
+  padding: 14px;
+  background: rgba(30, 41, 59, 0.58);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.award-card b {
+  color: #fbbf24;
+}
+
+@media (max-width: 900px) {
+  .topbar,
+  .dashboard,
+  .stadium-layout {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+  }
+
+  .topbar {
+    align-items: stretch;
+  }
+
+  .children {
+    flex-direction: column;
+  }
+}
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.large-rank-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.compact-rank-box {
+  background: rgba(2, 6, 23, 0.38);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 18px;
+  padding: 14px;
+}
+
+.compact-rank-box h3 {
+  margin: 0 0 8px;
+  color: #bfdbfe;
+}
+
+.compact-rank-box ol {
+  margin: 0;
+  padding-left: 22px;
+  max-height: 320px;
+  overflow: auto;
+}
+
+.compact-rank-box li {
+  margin: 6px 0;
+  color: #dbeafe;
+  font-size: 13px;
+}
+
+.finished-note {
+  color: #86efac;
+  font-weight: 800;
+  margin-top: 12px;
+}
+
+.boxscore-panel h3 {
+  margin: 18px 0 8px;
+}
+
+.boxscore-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+.boxscore-table {
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  border-radius: 18px;
+  padding: 12px;
+  background: rgba(2, 6, 23, 0.32);
+}
+
+.total-row td {
+  font-weight: 1000;
+  color: #fef3c7;
+  background: rgba(120, 53, 15, 0.25);
+}
+
+.small-result {
+  font-size: 22px;
+}
+
+.modal-backdrop {
+  align-items: flex-start;
+  justify-items: center;
+  overflow-y: auto;
+  padding: 24px;
+  z-index: 1000;
+}
+
+.modal {
+  position: relative;
+  margin-top: 12px;
+  max-height: calc(100vh - 48px);
+  overflow: auto;
+}
+
+.modal-close {
+  position: sticky;
+  top: 0;
+  float: right;
+  z-index: 2;
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  font-size: 24px;
+  line-height: 1;
+  background: rgba(127, 29, 29, 0.9);
+  border-color: rgba(248, 113, 113, 0.65);
+}
+
+.modal-title {
+  padding-right: 54px;
+}
+
+.award-lists {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.award-list {
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 18px;
+  padding: 14px;
+  background: rgba(2, 6, 23, 0.34);
+}
+
+.award-list ol {
+  margin: 8px 0 0;
+  padding-left: 22px;
+}
+
+.award-list li {
+  margin: 7px 0;
+  color: #dbeafe;
+}
+
+
+/* update2: TeamInfo 모달을 body 포털로 띄우고 화면 맨 위에서 시작하게 고정 */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  align-items: flex-start;
+  justify-items: center;
+  overflow-y: auto;
+  padding: 18px 18px 40px;
+  z-index: 99999;
+}
+
+.modal {
+  width: min(1180px, calc(100vw - 36px));
+  max-height: calc(100vh - 36px);
+  margin: 0 auto;
+  overflow: auto;
+}
+
+.modal-close {
+  position: sticky;
+  top: 0;
+  float: right;
+  z-index: 10;
+}
+
+.wide-award-list {
+  grid-column: 1 / -1;
+}
+
+.position-award-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.position-award-box {
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  border-radius: 14px;
+  padding: 12px;
+  background: rgba(15, 23, 42, 0.55);
+}
+
+.position-award-box h4 {
+  margin: 0 0 8px;
+  color: #fbbf24;
+}
+
+.position-award-box ol {
+  max-height: 230px;
+  overflow: auto;
+}
+
+/* update4: 팀 선택 화면 안내 문구와 시뮬레이션 모드 선택 창 */
+.data-notice {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 10px 14px;
+  border: 1px solid rgba(96, 165, 250, 0.35);
+  background: rgba(30, 64, 175, 0.28);
+  border-radius: 999px;
+  color: #dbeafe !important;
+  font-weight: 800;
+}
+
+.mode-modal {
+  width: min(760px, 100%);
+}
+
+.mode-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.mode-card {
+  min-height: 160px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  background: rgba(15, 23, 42, 0.96);
+  border-color: rgba(148, 163, 184, 0.34);
+}
+
+.mode-card b {
+  font-size: 18px;
+  color: #f8fafc;
+}
+
+.mode-card span {
+  color: #cbd5e1;
+  line-height: 1.55;
+}
+
+.primary-mode {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.88), rgba(124, 58, 237, 0.88));
+  border-color: rgba(191, 219, 254, 0.7);
+}
+
+/* update5: 과제 요구사항을 더 명확하게 보이게 하는 OOP 노드 클릭 UI와 기록 메뉴 */
+.oop-help {
+  margin: 0 0 14px;
+  color: #cbd5e1;
+  line-height: 1.55;
+  font-size: 14px;
+}
+
+.diagram button.node {
+  display: block;
+  width: auto;
+  appearance: none;
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.diagram button.node:hover {
+  transform: translateY(-2px);
+  border-color: rgba(251, 191, 36, 0.85);
+  box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.12);
+}
+
+.selected-node {
+  border-color: rgba(251, 191, 36, 0.95) !important;
+  box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.18), 0 18px 38px rgba(0, 0, 0, 0.24);
+  background: rgba(120, 53, 15, 0.42) !important;
+}
+
+.node-console {
+  margin-bottom: 12px;
+  border-color: rgba(251, 191, 36, 0.22);
+}
+
+.record-menu-panel {
+  margin-top: 18px;
+}
+
+.record-menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.menu-button {
+  min-height: 62px;
+  background: rgba(15, 23, 42, 0.92);
+  border-color: rgba(96, 165, 250, 0.32);
+  font-size: 15px;
+}
+
+.menu-button.is-active {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.92), rgba(124, 58, 237, 0.92));
+  border-color: rgba(191, 219, 254, 0.72);
+  box-shadow: 0 14px 36px rgba(37, 99, 235, 0.2);
+}
+
+.menu-note {
+  margin: 12px 0 0;
+}
+
+.team-record-center h3 {
+  margin: 22px 0 10px;
+  color: #dbeafe;
+}
+
+/* update7: 팀 색상 배경, 야구장 재설계, 선수 상세 기록 모달, 기록 설명 UI */
+.app {
+  position: relative;
+}
+.app::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 12% 8%, color-mix(in srgb, var(--team-primary, #2563eb) 42%, transparent), transparent 30rem),
+    radial-gradient(circle at 92% 16%, color-mix(in srgb, var(--team-primary, #2563eb) 28%, transparent), transparent 28rem);
+}
+.team-themed {
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--team-primary, #2563eb) 24%, rgba(15,23,42,.78)), rgba(15, 23, 42, .82)),
+    rgba(15,23,42,.76);
+  border-color: color-mix(in srgb, var(--team-primary, #60a5fa) 45%, rgba(148,163,184,.2));
+}
+.team-card {
+  position: relative;
+  overflow: hidden;
+}
+.team-card::after {
+  content: "";
+  position: absolute;
+  inset: auto -40px -50px auto;
+  width: 150px;
+  height: 150px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--team-color, #2563eb) 28%, transparent);
+  filter: blur(4px);
+}
+.team-color-preview {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  border: 1px solid rgba(148,163,184,.22);
+  border-radius: 18px;
+  padding: 16px;
+  margin-bottom: 14px;
+}
+.team-color-preview b { font-size: 28px; }
+.team-color-preview span { color: #dbeafe; }
+
+.link-button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #bfdbfe;
+  border-radius: 0;
+  font-weight: 900;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.link-button:hover {
+  transform: none;
+  color: #fde68a;
+}
+
+.oop-panel .diagram {
+  gap: 14px;
+  margin: 18px auto 22px;
+  max-width: 700px;
+}
+.diagram button.node,
+.node {
+  min-width: 240px;
+  min-height: 74px;
+  line-height: 1.3;
+  word-break: keep-all;
+}
+.children {
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.children .node { min-width: 210px; }
+.arrow { line-height: 1; margin: 2px 0; }
+
+.stadium {
+  min-height: 520px;
+  background: #f8fafc;
+  border-color: rgba(255,255,255,.18);
+}
+.field {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  overflow: hidden;
+  background: #eef2f7;
+}
+.field-shape {
+  position: absolute;
+  left: 50%;
+  top: 28px;
+  width: min(92%, 760px);
+  height: 470px;
+  transform: translateX(-50%);
+  background:
+    repeating-linear-gradient(90deg, rgba(21,128,61,.82) 0 54px, rgba(34,145,74,.82) 54px 108px);
+  clip-path: polygon(50% 100%, 4% 39%, 18% 18%, 50% 4%, 82% 18%, 96% 39%);
+  border: 8px solid #e7b77b;
+  box-shadow: inset 0 -120px 0 rgba(25,120,62,.28), 0 12px 34px rgba(0,0,0,.25);
+}
+.outfield-line {
+  position: absolute;
+  left: 50%;
+  top: 78px;
+  width: min(70%, 560px);
+  height: 220px;
+  transform: translateX(-50%);
+  border-top: 4px solid rgba(255,255,255,.72);
+  border-radius: 50% 50% 0 0;
+  z-index: 2;
+}
+.foul-line {
+  position: absolute;
+  width: 330px;
+  height: 4px;
+  background: rgba(255,255,255,.78);
+  transform-origin: bottom center;
+  z-index: 3;
+  bottom: 98px;
+  left: 50%;
+}
+.left-foul { transform: translateX(-100%) rotate(47deg); }
+.right-foul { transform: translateX(0) rotate(-47deg); }
+.infield-dirt {
+  position: absolute;
+  z-index: 4;
+  left: 50%;
+  bottom: 100px;
+  width: 310px;
+  height: 250px;
+  transform: translateX(-50%);
+  background: #e9b477;
+  clip-path: polygon(50% 0, 87% 39%, 50% 83%, 13% 39%);
+  border-radius: 18px;
+}
+.infield-dirt::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  width: 108px;
+  height: 108px;
+  transform: translate(-50%, -50%);
+  border-radius: 999px;
+  background: #22844e;
+  box-shadow: inset 0 0 0 18px #22844e;
+}
+.grass-stripe { position: absolute; z-index: 1; top: 44px; bottom: 120px; width: 10%; background: rgba(255,255,255,.08); }
+.s1 { left: 23%; } .s2 { left: 34%; } .s3 { left: 46%; } .s4 { left: 58%; } .s5 { left: 69%; }
+.base {
+  z-index: 8;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: #fff7d6;
+  border: 2px solid #f0c989;
+}
+.base.home { left: calc(50% - 17px); bottom: 58px; }
+.base.first { left: calc(50% + 126px); bottom: 160px; }
+.base.second { left: calc(50% - 17px); bottom: 258px; }
+.base.third { left: calc(50% - 160px); bottom: 160px; }
+.fielder {
+  position: absolute;
+  z-index: 10;
+  background: rgba(15,23,42,.82);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.45);
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 1000;
+  padding: 4px 7px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.24);
+}
+.fielder-p { left: calc(50% - 15px); bottom: 190px; }
+.fielder-c { left: calc(50% - 15px); bottom: 32px; }
+.fielder-fb { left: calc(50% + 122px); bottom: 195px; }
+.fielder-sb { left: calc(50% + 58px); bottom: 258px; }
+.fielder-tb { left: calc(50% - 160px); bottom: 195px; }
+.fielder-ss { left: calc(50% - 92px); bottom: 258px; }
+.fielder-lf { left: 22%; top: 170px; }
+.fielder-cf { left: calc(50% - 16px); top: 102px; }
+.fielder-rf { right: 22%; top: 170px; }
+.ball { z-index: 20; font-size: 32px; }
+.ball-home { left: calc(50% - 16px); bottom: 76px; }
+.ball-mound { left: calc(50% - 16px); bottom: 197px; }
+.ball-first { left: calc(50% + 130px); bottom: 176px; }
+.ball-second { left: calc(50% - 16px); bottom: 278px; }
+.ball-third { left: calc(50% - 150px); bottom: 176px; }
+.ball-short { left: calc(50% - 108px); bottom: 274px; }
+.ball-left { left: 24%; top: 200px; }
+.ball-center { left: calc(50% - 16px); top: 142px; }
+.ball-right { right: 24%; top: 200px; }
+.ball-leftLine { left: 13%; top: 245px; }
+.ball-rightLine { right: 13%; top: 245px; }
+.ball-leftCenter { left: 33%; top: 102px; }
+.ball-rightCenter { right: 33%; top: 102px; }
+.ball-homer { left: calc(50% - 16px); top: 34px; }
+.play-message { z-index: 30; }
+.empty-stadium { min-height: 160px; }
+
+.line-score {
+  border: 1px solid rgba(148,163,184,.18);
+  border-radius: 16px;
+  margin: 14px 0 20px;
+  background: rgba(2,6,23,.34);
+}
+.line-score table th,
+.line-score table td { text-align: center; }
+.line-score table th:first-child,
+.line-score table td:first-child { text-align: left; }
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+  gap: 12px;
+}
+.detail-card {
+  border: 1px solid rgba(148,163,184,.18);
+  border-radius: 14px;
+  background: rgba(2,6,23,.38);
+  padding: 12px;
+}
+.detail-card span {
+  display: block;
+  color: #94a3b8;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+.detail-card b {
+  font-size: 20px;
+  color: #f8fafc;
+}
+.help-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 14px;
+}
+.help-grid > div {
+  border: 1px solid rgba(148,163,184,.18);
+  border-radius: 16px;
+  background: rgba(2,6,23,.38);
+  padding: 14px;
+}
+.help-grid h3, .help-grid p { margin: 0; }
+.help-grid p { margin-top: 8px; color: #cbd5e1; line-height: 1.55; }
+.notice-modal { max-width: 560px; }
+.notice-modal p { color: #cbd5e1; line-height: 1.6; }
+
+@media (max-width: 900px) {
+  .diagram button.node, .node { min-width: 190px; }
+  .stadium { min-height: 430px; }
+  .field { height: 430px; }
+  .field-shape { height: 390px; }
+  .fielder { font-size: 10px; }
+}
+
+
+/* update8: OOP 노드 겹침 해결, 팀 컬러 확장 적용, 첫 화면 제출자 표기 */
+.student-notice {
+  margin: 12px 0 0;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid rgba(147, 197, 253, 0.28);
+  border-radius: 999px;
+  padding: 8px 13px;
+  color: #dbeafe;
+  background: rgba(15, 23, 42, 0.58);
+  font-weight: 800;
+}
+
+.app .panel {
+  border-color: color-mix(in srgb, var(--team-primary, #60a5fa) 24%, rgba(148, 163, 184, 0.2));
+  background:
+    linear-gradient(145deg, color-mix(in srgb, var(--team-primary, #2563eb) 9%, rgba(15, 23, 42, 0.78)), rgba(15, 23, 42, 0.78));
+}
+
+.app .section-title h2,
+.app h3 {
+  color: color-mix(in srgb, var(--team-secondary, #ffffff) 86%, #dbeafe);
+}
+
+.app .section-title span,
+.app .eyebrow {
+  color: color-mix(in srgb, var(--team-primary, #93c5fd) 36%, #bfdbfe);
+}
+
+.app button.primary,
+.app .menu-button.is-active,
+.app .primary-mode {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--team-primary, #2563eb) 86%, #111827), color-mix(in srgb, var(--team-secondary, #7c3aed) 42%, #1e1b4b));
+  border-color: color-mix(in srgb, var(--team-secondary, #ffffff) 54%, var(--team-primary, #60a5fa));
+}
+
+.app .menu-button,
+.app .rank-box,
+.app .detail-card,
+.app .award-card,
+.app .help-grid > div {
+  border-color: color-mix(in srgb, var(--team-primary, #60a5fa) 20%, rgba(148, 163, 184, 0.2));
+}
+
+.oop-panel .diagram {
+  gap: 20px !important;
+  padding: 4px 0 10px;
+  overflow: visible;
+}
+
+.oop-panel .diagram button.node,
+.oop-panel .node {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-width: min(380px, 92%);
+  min-height: 88px;
+  line-height: 1.18 !important;
+  white-space: normal;
+  overflow: visible;
+  padding: 18px 24px;
+  margin: 0;
+}
+
+.oop-panel .node small {
+  display: block;
+  margin-top: 2px;
+  line-height: 1.25;
+  font-size: 14px;
+}
+
+.oop-panel .arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 30px;
+  margin: 0;
+  font-size: 26px;
+}
+
+.oop-panel .children {
+  width: 100%;
+  align-items: stretch;
+  justify-content: center;
+  gap: 20px;
+}
+
+.oop-panel .children .node {
+  min-width: min(280px, 45%);
+}
+
+@media (max-width: 720px) {
+  .oop-panel .children {
+    flex-direction: column;
+    align-items: center;
+  }
+  .oop-panel .children .node {
+    min-width: min(360px, 92%);
+  }
+}
+
+.current-pitcher-line {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+  margin: 4px 0 8px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  color: #dbeafe;
+  background: color-mix(in srgb, var(--team-primary, #2563eb) 18%, rgba(2, 6, 23, 0.62));
+  border: 1px solid color-mix(in srgb, var(--team-primary, #60a5fa) 38%, rgba(148, 163, 184, 0.24));
+}
+.current-pitcher-line b { color: #fff; }
+
+/* update10: update9 기준 최종 UI 안정화 */
+.student-notice {
+  margin-left: auto;
+  margin-right: 0;
+  width: fit-content;
+  justify-content: flex-end;
+}
+.hero > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.hero .student-notice {
+  align-self: flex-end;
+}
+
+/* 팀 색상은 전체 배경과 팀명에만 은은하게 반영하고, 주요 패널은 중립 색상 유지 */
+.app .panel,
+.app .next-game,
+.app .oop-panel,
+.app .record-menu-panel,
+.app .stadium-panel {
+  border-color: rgba(148, 163, 184, 0.2) !important;
+  background: rgba(15, 23, 42, 0.76) !important;
+}
+.app .section-title h2,
+.app h3 {
+  color: #f8fafc !important;
+}
+.app .section-title span {
+  color: #94a3b8 !important;
+}
+.app .eyebrow {
+  color: #93c5fd !important;
+}
+.app button.primary,
+.app .menu-button.is-active {
+  background: linear-gradient(135deg, #2563eb, #7c3aed) !important;
+  border-color: rgba(191, 219, 254, 0.72) !important;
+}
+.team-color-name {
+  font-weight: 1000;
+  text-shadow: 0 0 14px rgba(255,255,255,.08);
+  margin-right: 4px;
+  white-space: nowrap;
+}
+.team-name-cell .team-color-name {
+  margin-right: 0;
+}
+.link-button {
+  color: #bfdbfe !important;
+}
+.link-button:hover {
+  color: #fde68a !important;
+}
+
+/* OOP 노드 겹침 방지: flex 대신 grid로 세로 구조 고정 */
+.oop-panel .diagram {
+  display: grid !important;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+  gap: 12px !important;
+  max-width: 760px;
+  margin: 18px auto 22px;
+  overflow: visible;
+}
+.oop-panel .diagram button.node,
+.oop-panel .node {
+  width: min(420px, 96%) !important;
+  min-width: 0 !important;
+  min-height: 82px !important;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  margin: 0 !important;
+  padding: 16px 20px !important;
+}
+.oop-panel .children {
+  width: min(620px, 100%);
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  gap: 14px !important;
+  justify-content: center;
+  align-items: stretch;
+}
+.oop-panel .children .node {
+  width: 100% !important;
+  min-width: 0 !important;
+}
+.oop-panel .arrow {
+  min-height: 24px !important;
+  font-size: 24px !important;
+  line-height: 1 !important;
+  margin: 0 !important;
+  display: grid;
+  place-items: center;
+}
+@media (max-width: 720px) {
+  .oop-panel .children {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 시작 안내창은 버튼을 막지 않는 토스트 형태로 표시 */
+.floating-notice {
+  position: fixed;
+  right: 22px;
+  top: 22px;
+  z-index: 9999;
+  width: min(420px, calc(100vw - 44px));
+  padding: 16px 44px 16px 18px;
+  border: 1px solid rgba(191, 219, 254, .32);
+  border-radius: 18px;
+  background: rgba(15, 23, 42, .96);
+  color: #e5e7eb;
+  box-shadow: 0 22px 80px rgba(0,0,0,.45);
+  backdrop-filter: blur(16px);
+}
+.floating-notice b {
+  display: block;
+  color: #f8fafc;
+  margin-bottom: 6px;
+}
+.floating-notice span {
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+.toast-close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: rgba(127, 29, 29, 0.8);
+}
+
+
+/* update11: 색상 가독성 + 버튼 동작 안정화 후 최종 UI 보정 */
+.team-color-name {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 22px;
+  padding: 2px 8px;
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 999px;
+  font-weight: 1000;
+  line-height: 1.1;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.12), 0 0 18px rgba(0,0,0,.18);
+}
+.team-name-cell .team-color-name {
+  margin-right: 0;
+}
+.link-button {
+  color: #bfdbfe !important;
+  background: transparent !important;
+}
+.link-button:hover {
+  color: #fde68a !important;
+}
+
+/* 주요 패널은 흰색/중립 배경 유지 */
+.app .panel,
+.app .next-game,
+.app .oop-panel,
+.app .record-menu-panel,
+.app .stadium-panel {
+  border-color: rgba(148, 163, 184, 0.2) !important;
+  background: rgba(15, 23, 42, 0.78) !important;
+}
+
+/* 선택 팀 색상은 버튼, 상단 라인, 전체 배경에만 예쁘게 반영 */
+.app::before {
+  background:
+    radial-gradient(circle at 12% 8%, var(--team-accent-soft, rgba(37,99,235,.18)), transparent 32rem),
+    radial-gradient(circle at 92% 16%, color-mix(in srgb, var(--team-accent, #60a5fa) 14%, transparent), transparent 28rem),
+    radial-gradient(circle at 50% 100%, color-mix(in srgb, var(--team-accent, #60a5fa) 10%, transparent), transparent 34rem) !important;
+}
+.topbar.team-themed {
+  border-color: color-mix(in srgb, var(--team-accent, #60a5fa) 42%, rgba(148, 163, 184, 0.22)) !important;
+  box-shadow: 0 20px 90px color-mix(in srgb, var(--team-accent, #60a5fa) 16%, rgba(0,0,0,.32));
+}
+.app button.primary,
+.app .menu-button.is-active {
+  background: linear-gradient(135deg, var(--team-accent, #2563eb), color-mix(in srgb, var(--team-accent, #2563eb) 58%, #1e1b4b)) !important;
+  color: var(--team-button-text, #f8fafc) !important;
+  border-color: color-mix(in srgb, var(--team-accent, #60a5fa) 60%, rgba(255,255,255,.38)) !important;
+  box-shadow: 0 14px 34px color-mix(in srgb, var(--team-accent, #2563eb) 22%, rgba(0,0,0,.22));
+}
+.app button.primary:hover,
+.app .menu-button.is-active:hover {
+  filter: brightness(1.08);
+}
+.app .progress div {
+  background: linear-gradient(90deg, var(--team-accent, #38bdf8), color-mix(in srgb, var(--team-accent, #38bdf8) 50%, #a78bfa)) !important;
+}
+.current-pitcher-line {
+  background: color-mix(in srgb, var(--team-accent, #2563eb) 16%, rgba(2, 6, 23, 0.62)) !important;
+  border-color: color-mix(in srgb, var(--team-accent, #60a5fa) 34%, rgba(148, 163, 184, 0.24)) !important;
+}
+
+/* OOP 그림 겹침 최종 방지 */
+.oop-panel .diagram {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  grid-auto-rows: auto !important;
+  justify-items: center !important;
+  gap: 14px !important;
+  overflow: visible !important;
+}
+.oop-panel .diagram button.node,
+.oop-panel .node {
+  position: relative !important;
+  z-index: 1 !important;
+  width: min(430px, 96%) !important;
+  min-width: 0 !important;
+  min-height: 84px !important;
+  margin: 0 !important;
+}
+.oop-panel .children {
+  display: grid !important;
+  width: min(640px, 100%) !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 14px !important;
+}
+.oop-panel .children .node {
+  width: 100% !important;
+}
+@media (max-width: 720px) {
+  .oop-panel .children { grid-template-columns: 1fr !important; }
+}
+
+/* 버튼 위에 토스트가 있어도 경기 진행 버튼을 막지 않도록 처리 */
+.floating-notice {
+  pointer-events: none;
+}
+.floating-notice .toast-close {
+  pointer-events: auto;
+}
