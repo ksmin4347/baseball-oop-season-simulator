@@ -614,7 +614,7 @@ const SeasonAwards = ({ season, onPlayerClick }: { season: SeasonState; onPlayer
 };
 
 const clampRating = (value: number) => Math.max(35, Math.min(99, Math.round(value)));
-const applySelectedTeamBoost = (season: SeasonState, teamId: string): SeasonState => ({ ...season, teams: season.teams.map((team) => team.id !== teamId ? team : { ...team, batters: team.batters.map((batter) => ({ ...batter, contact: clampRating(batter.contact + 2), power: clampRating(batter.power + 2), discipline: clampRating(batter.discipline + 2), speed: clampRating(batter.speed + 2), clutch: clampRating(batter.clutch + 2) })), pitchers: team.pitchers.map((pitcher) => ({ ...pitcher, stuff: clampRating(pitcher.stuff + 2), control: clampRating(pitcher.control + 2), stamina: clampRating(pitcher.stamina + 2), crisis: clampRating(pitcher.crisis + 2) })) }) });
+const applySelectedTeamBoost = (season: SeasonState, teamId: string): SeasonState => ({ ...season, teams: season.teams.map((team) => team.id !== teamId ? team : { ...team, batters: team.batters.map((batter) => ({ ...batter, contact: clampRating(batter.contact + 4), power: clampRating(batter.power + 4), discipline: clampRating(batter.discipline + 4), speed: clampRating(batter.speed + 4), clutch: clampRating(batter.clutch + 4) })), pitchers: team.pitchers.map((pitcher) => ({ ...pitcher, stuff: clampRating(pitcher.stuff + 4), control: clampRating(pitcher.control + 4), stamina: clampRating(pitcher.stamina + 4), crisis: clampRating(pitcher.crisis + 4) })) }) });
 
 function App() {
   const [season, setSeason] = useState<SeasonState>(() => loadSeason() ?? createNewSeason());

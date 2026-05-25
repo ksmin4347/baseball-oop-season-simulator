@@ -91,9 +91,9 @@ const rawTeams: {
         "lineupNo": 5,
         "position": "DH",
         "name": "최형우",
-        "contact": 94,
+        "contact": 93,
         "power": 85,
-        "discipline": 90,
+        "discipline": 88,
         "speed": 38,
         "clutch": 90
       },
@@ -1739,8 +1739,8 @@ const teamLevelScores: Record<string, {
 }> = {
   samsung: { contact: 5, power: 5, discipline: 5, speed: 5, clutch: 5, stuff: 5, control: 5, stamina: 5, crisis: 5 },
   kt: { contact: 6, power: 5, discipline: 5, speed: 4.5, clutch: 6.5, stuff: 4.5, control: 6, stamina: 5, crisis: 6 },
-  lg: { contact: 5, power: 4.5, discipline: 6, speed: 6, clutch: 5.5, stuff: 4.5, control: 6, stamina: 5, crisis: 6 },
-  doosan: { contact: 4, power: 4.5, discipline: 4, speed: 6, clutch: 4.5, stuff: 4.5, control: 5, stamina: 5, crisis: 6.5 },
+  lg: { contact: 5, power: 4.5, discipline: 6, speed: 6, clutch: 5.5, stuff: 5.5, control: 6, stamina: 5, crisis: 6 },
+  doosan: { contact: 4, power: 4.5, discipline: 4, speed: 6, clutch: 4.5, stuff: 5.5, control: 5.5, stamina: 5, crisis: 6.5 },
   kia: { contact: 5 , power: 7, discipline: 4.5, speed: 5, clutch: 5, stuff: 5.5, control: 5, stamina: 5, crisis: 5.5 },
   hanwha: { contact: 5.5, power: 5.5, discipline: 4, speed: 5, clutch: 6, stuff: 4, control: 3.5, stamina: 5, crisis: 5.5 },
   kiwoom: { contact: 4, power: 3.5, discipline: 4, speed: 4, clutch: 4, stuff: 4, control: 4.5, stamina: 5, crisis: 5.5 },
@@ -1801,7 +1801,7 @@ const defaultBatterRatings = (batter: RawBatter): BatterRatings => {
   };
 
   if (n <= 7) return {
-    contact: clamp(73 + jitter),
+    contact: clamp(75 + jitter),
     power: clamp(70 + hashScore(batter.name, -9, 9)),
     discipline: clamp(63 + hashScore(batter.name, -6, 6)),
     speed: clamp(67 + hashScore(batter.name, -8, 8)),
@@ -1809,8 +1809,8 @@ const defaultBatterRatings = (batter: RawBatter): BatterRatings => {
   };
 
   return {
-    contact: clamp(76 + jitter),
-    power: clamp(55 + hashScore(batter.name, -9, 9)),
+    contact: clamp(77 + jitter),
+    power: clamp(58 + hashScore(batter.name, -9, 9)),
     discipline: clamp(58 + hashScore(batter.name, -6, 6)),
     speed: clamp(68 + hashScore(batter.name, -10, 10)),
     clutch: clamp(58 + hashScore(batter.name, -7, 7)),
