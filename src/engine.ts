@@ -961,6 +961,11 @@ export const simulateGame = (state: SeasonState, game: ScheduleGame): GameSummar
   const away = getTeam(state, game.awayTeamId);
   const home = getTeam(state, game.homeTeamId);
 
+  // 새 경기는 항상 1번 타자부터 시작해야 한다.
+  // 시즌 누적 기록은 유지하되, 경기별 타순 인덱스는 매 경기 시작 시 초기화한다.
+  away.lineupIndex = 0;
+  home.lineupIndex = 0
+
   away.batters.forEach((b) => { b.stats.games += 1; });
   home.batters.forEach((b) => { b.stats.games += 1; });
 
