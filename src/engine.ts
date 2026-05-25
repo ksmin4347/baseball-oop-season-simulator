@@ -347,7 +347,7 @@ const outResult = (pitcher: PitcherData): { kind: PlayKind; result: string } => 
 const hitResult = (batter: BatterData, pitcher: PitcherData): { kind: PlayKind; result: string } => {
   const powerEdge = batter.power - pitcher.stuff;
   // 타율은 유지하면서 홈런 부족 문제를 보정하기 위해, 안타가 나온 뒤 홈런으로 전환되는 비율만 소폭 상향했다.
-  const hr = pct(0.067 + (powerEdge * 0.005) + (batter.clutch - 70) * 0.00035);
+  const hr = pct(0.067 + (powerEdge * 0.0055) + (batter.clutch - 70) * 0.00035);
   const triple = pct(0.014 + (batter.speed - 70) * 0.0007 + (batter.power - 70) * 0.00022);
   const double = pct(0.232 + powerEdge * 0.00105);
   const r = Math.random();
@@ -583,8 +583,9 @@ const playPlateAppearance = (ctx: GameContext, battersFacedInInning: number) => 
   ctx.scoredThisPlay = [];
 
   // 전체 리그가 투고타저로 치우치지 않도록 타격 확률을 상향하고 삼진 확률을 낮췄다.
+  //볼넷/삼진/ /안타
   const walkProb = pct(0.084 + (batter.discipline - 70) * 0.0019 - (pitcher.control - 70) * 0.0022);
-  const kProb = pct(0.152 + (pitcher.stuff - 70) * 0.00175 - (battingAvoidK(batter) - 70) * 0.0025);
+  const kProb = pct(0.18 + (pitcher.stuff - 70) * 0.00175 - (battingAvoidK(batter) - 70) * 0.0025);
   const clutchBonus = (ctx.bases.second || ctx.bases.third) ? (batter.clutch - pitcher.crisis) * 0.00135 : 0;
   const hitProb = pct(0.313 + (batter.contact - 70) * 0.00265 - (pitcher.stuff - 70) * 0.00155 + clutchBonus);
 

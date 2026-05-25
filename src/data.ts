@@ -92,7 +92,7 @@ const rawTeams: {
         "position": "DH",
         "name": "최형우",
         "contact": 94,
-        "power": 88,
+        "power": 85,
         "discipline": 90,
         "speed": 38,
         "clutch": 90
@@ -111,9 +111,9 @@ const rawTeams: {
         "lineupNo": 7,
         "position": "2B",
         "name": "류지혁",
-        "contact": 80,
+        "contact": 81,
         "power": 65,
-        "discipline": 65,
+        "discipline": 75,
         "speed": 83,
         "clutch": 75
       },
@@ -132,7 +132,7 @@ const rawTeams: {
         "position": "SS",
         "name": "이재현",
         "contact": 73,
-        "power": 78,
+        "power": 76,
         "discipline": 73,
         "speed": 70,
         "clutch": 80
@@ -145,10 +145,10 @@ const rawTeams: {
         "rotationNo": 1,
         "bullpenTier": null,
         "label": "1선발",
-        "stuff": 91,
+        "stuff": 90,
         "control": 95,
         "stamina": 98,
-        "crisis": 65
+        "crisis": 85
       },
       {
         "name": "원태인",
@@ -156,7 +156,7 @@ const rawTeams: {
         "rotationNo": 2,
         "bullpenTier": null,
         "label": "2선발",
-        "stuff": 93,
+        "stuff": 91,
         "control": 94,
         "stamina": 89,
         "crisis": 80
@@ -178,7 +178,7 @@ const rawTeams: {
         "rotationNo": 4,
         "bullpenTier": null,
         "label": "4선발",
-        "stuff": 75,
+        "stuff": 71,
         "control": 70,
         "stamina": 78,
         "crisis": 78
@@ -189,8 +189,8 @@ const rawTeams: {
         "rotationNo": 5,
         "bullpenTier": null,
         "label": "5선발",
-        "stuff": 73,
-        "control": 72,
+        "stuff": 70,
+        "control": 69,
         "stamina": 77,
         "crisis": 54
       },
@@ -200,7 +200,7 @@ const rawTeams: {
         "rotationNo": null,
         "bullpenTier": "SETUP",
         "label": "필승조",
-        "stuff": 85,
+        "stuff": 82,
         "control": 85,
         "stamina": 55,
         "crisis": 65
@@ -236,7 +236,7 @@ const rawTeams: {
         "stuff": 85,
         "control": 50,
         "stamina": 43,
-        "crisis": 75
+        "crisis": 70
       },
       {
         "name": "김태훈",
@@ -266,8 +266,8 @@ const rawTeams: {
         "rotationNo": null,
         "bullpenTier": "LONG",
         "label": "롱릴리프",
-        "stuff": 75,
-        "control": 65,
+        "stuff": 80,
+        "control": 55,
         "stamina": 50,
         "crisis": 70
       },
@@ -277,7 +277,7 @@ const rawTeams: {
         "rotationNo": null,
         "bullpenTier": "CLOSER",
         "label": "마무리",
-        "stuff": 91,
+        "stuff": 90,
         "control": 88,
         "stamina": 50,
         "crisis": 88
@@ -964,7 +964,7 @@ const rawTeams: {
       {
         "lineupNo": 7,
         "position": "1B",
-        "name": "채은성"
+        "name": "김태연"
       },
       {
         "lineupNo": 8,
@@ -1753,7 +1753,7 @@ const levelBonus = (teamId: string, key: keyof typeof teamLevelScores["samsung"]
   const teamScore = teamLevelScores[teamId]?.[key] ?? 5;
   // 삼성 5점을 기준으로 1점 차이당 약 3.2 능력치 포인트를 보정한다.
   // 너무 큰 쏠림을 막기 위해 팀 보정은 -9~+9 사이로 제한한다.
-  return clamp((teamScore - 5) * 3.2, -9, 9);
+  return clamp((teamScore - 5) * 3.0, -9, 9);
 };
 
 const defaultBatterRatings = (batter: RawBatter): BatterRatings => {

@@ -145,7 +145,7 @@ const TeamSelect = ({ season, onSelect }: { season: SeasonState; onSelect: (team
           <p className="eyebrow">Data Structures Assignment 2</p>
           <h1>Baseball OOP Season Simulator</h1>
           <p>OOP 상속 구조와 다형성을 바탕으로 만든 10개 팀 야구 시즌 시뮬레이션 웹앱입니다. 팀을 선택하면 144경기 시즌을 시작합니다.</p>
-          <p className="data-notice">선수들의 스탯은 KBO리그 2026년 5월 23일 기준 성적과 팀 전력표를 바탕으로 설정되었습니다.</p>
+          <p className="data-notice">선수들의 스탯은 KBO리그 2026년 5월 24일 기준 성적과 팀 전력표를 바탕으로 설정되었습니다.</p>
           <p className="student-notice">숭실대학교 IT대학 컴퓨터학부 20233164 최현민</p>
         </div>
       </section>
@@ -161,7 +161,7 @@ const TeamSelect = ({ season, onSelect }: { season: SeasonState; onSelect: (team
             <span className="team-badge" style={{ background: team.primaryColor, color: team.secondaryColor }}>{team.shortName}</span>
             <h2>{team.name}</h2>
             <p>{team.region} · {team.stadium}</p>
-            <div className="mini-metrics"><span>타자 9명</span><span>투수 12명</span><span>144경기</span></div>
+            <div className="mini-metrics"><span>타자 9명</span><span>투수 13명</span><span>144경기</span></div>
           </button>
         ))}
       </section>
@@ -176,7 +176,7 @@ const TeamSelect = ({ season, onSelect }: { season: SeasonState; onSelect: (team
             </div>
             <div className="team-color-preview" style={{ background: `linear-gradient(135deg, ${pendingTeam.primaryColor}55, rgba(15,23,42,.96))` }}>
               <b>{pendingTeam.shortName}</b>
-              <span>선택한 팀 색상이 시즌 대시보드 배경에 은은하게 반영됩니다.</span>
+              <span>선택한 팀 색상이 시즌 대시보드 배경에 반영됩니다.</span>
             </div>
             <p className="muted">시즌 시작 방식을 선택하세요. 과제 제출용 OOP 구조와 다형성 기능은 두 방식 모두 동일하게 유지됩니다.</p>
             <div className="mode-grid">
